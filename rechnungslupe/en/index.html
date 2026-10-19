@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Rechnungslupe – Help</title>
+<meta name="description" content="Help, contact and frequently asked questions for Rechnungslupe, the app for viewing e-invoices (XRechnung, ZUGFeRD, Factur-X) on Mac, iPhone and iPad.">
+<link rel="canonical" href="https://jackthejipper.github.io/rechnungslupe/en/">
+<link rel="alternate" hreflang="de" href="https://jackthejipper.github.io/rechnungslupe/">
+<link rel="alternate" hreflang="en" href="https://jackthejipper.github.io/rechnungslupe/en/">
+<link rel="icon" type="image/png" href="../icon.png">
+<style>
+:root{--bg:#F9FAFC;--fg:#101419;--card:#FFFFFF;--muted:#F1F4F6;--muted-fg:#626A73;--border:#E3E5E8;--accent:#4F42EA;--on-accent:#FCFCFC;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1217;--fg:#F0F2F4;--card:#181C23;--muted:#25292F;--muted-fg:#9A9FA6;--border:#2F333A;--accent:#737AFC;--on-accent:#111419}}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.55;overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
+.wrap{max-width:800px;margin:0 auto;padding-left:16px;padding-right:16px}
+@media (min-width:640px){.wrap{padding-left:24px;padding-right:24px}}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+a[href^="mailto:"],a[href^="tel:"],a[href^="http"]{-webkit-hyphens:manual;hyphens:manual}
+a[href^="mailto:"],a[href^="tel:"]{white-space:nowrap}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:16px;top:-60px;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 12px;z-index:1}
+.skip:focus{top:8px}
+.site-header{background:var(--card);border-bottom:1px solid var(--border)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 20px;padding-top:4px;padding-bottom:4px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--fg);font-weight:600;text-decoration:none}
+.brand img{width:28px;height:28px;flex:none}
+.nav{display:flex;flex-wrap:wrap;gap:0 18px;font-size:15px}
+.nav a{display:inline-block;padding:11px 0;color:var(--muted-fg);text-decoration:none}
+.nav a:hover{color:var(--fg)}
+.nav a[aria-current="page"]{color:var(--fg);font-weight:600}
+main{padding-top:24px}
+@media (min-width:640px){main{padding-top:32px}}
+.hero{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:24px 16px;box-shadow:0 1px 3px rgba(2,6,24,.05)}
+@media (min-width:640px){.hero{padding:32px}}
+.hero-head{display:flex;align-items:center;gap:16px}
+.hero-head img{width:72px;height:72px;flex:none}
+@media (min-width:640px){.hero-head img{width:96px;height:96px}}
+h1{font-size:28px;line-height:1.2;letter-spacing:-.4px;margin:0;font-weight:700;-webkit-hyphens:manual;hyphens:manual}
+@media (min-width:640px){h1{font-size:34px}}
+.lead{font-size:18px;margin:16px 0 0}
+.meta{color:var(--muted-fg);font-size:15px;margin:8px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.chips li{margin:0;padding:4px 12px;border-radius:999px;background:var(--muted);font-size:15px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 0}
+.button{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:15px;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none}
+.button:hover{text-decoration:underline}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-top:20px;box-shadow:0 1px 3px rgba(2,6,24,.05)}
+@media (min-width:640px){.card{padding:24px;margin-top:24px}}
+.card.key{border-left:4px solid var(--accent)}
+h2{font-size:20px;line-height:1.3;letter-spacing:-.2px;margin:0 0 12px;font-weight:600}
+h3{font-size:17px;line-height:1.35;margin:24px 0 8px;font-weight:600}
+h2+h3{margin-top:8px}
+.block+.block{margin-top:24px;padding-top:24px;border-top:1px solid var(--border)}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:24px}
+li{margin:6px 0}
+.hero>:last-child,.card>:last-child,.block>:last-child,.answer>:last-child{margin-bottom:0}
+strong{font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em;background:var(--muted);padding:1px 5px;border-radius:5px}
+.toc ol{margin:0;padding-left:28px}
+@media (min-width:640px){.toc ol{columns:2;column-gap:32px}}
+.toc li{margin:0;padding:3px 0;break-inside:avoid}
+details{border-top:1px solid var(--border)}
+details:first-of-type{border-top:0}
+summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;padding:12px 0;cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary h3{margin:0}
+summary::after{content:"";flex:none;width:9px;height:9px;margin-right:4px;border-right:2px solid var(--muted-fg);border-bottom:2px solid var(--muted-fg);transform:translateY(-2px) rotate(45deg)}
+details[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+.answer{padding:0 0 16px}
+.app{display:flex;gap:16px;align-items:flex-start}
+.app img{width:64px;height:64px;flex:none}
+.app h2{margin-bottom:6px}
+.app h2 a{color:var(--fg);text-decoration:none}
+.app h2 a:hover{text-decoration:underline}
+.links{display:flex;flex-wrap:wrap;gap:4px 20px;margin:0}
+.links a{display:inline-block;padding:6px 0}
+.site-footer{color:var(--muted-fg);font-size:15px;padding-top:32px;padding-bottom:40px}
+.site-footer .links a{color:var(--muted-fg)}
+.site-footer p{margin:0}
+@media print{.site-header,.site-footer,.skip,.actions{display:none}body{background:#fff;color:#000}.hero,.card{border:0;box-shadow:none;padding:0}}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#inhalt">Skip to content</a>
+<header class="site-header">
+<div class="wrap bar">
+<a class="brand" href="./"><img src="../icon.png" alt="" width="28" height="28"><span>Rechnungslupe</span></a>
+<nav class="nav" aria-label="Pages">
+<a href="./" aria-current="page">Help</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="../" hreflang="de" lang="de">Deutsch</a>
+</nav>
+</div>
+</header>
+<main id="inhalt" class="wrap">
+
+<div class="hero">
+<div class="hero-head"><img src="../icon.png" alt="" width="96" height="96"><h1>Rechnungslupe – Help</h1></div>
+<p class="lead">Rechnungslupe makes e-invoices (XRechnung, ZUGFeRD, Factur-X) readable – on the Mac right in Finder with the space bar, on iPhone and iPad via “Share”. Buy it once in the App Store, use it on Mac, iPhone and iPad. Your invoices stay on your device.</p>
+<ul class="chips"><li>Mac, iPhone and iPad</li><li>One-time purchase, no subscription</li><li>No account, no tracking</li></ul>
+<p class="actions"><a class="button" href="mailto:info@getinvoiceflow.de">Email us</a></p>
+</div>
+<section class="card" id="contact">
+<h2>Contact</h2>
+<p>Questions, bugs, suggestions: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
+<p>To help us help you quickly, please tell us:</p>
+<ul>
+<li>your device and system version (e.g. “MacBook Air, macOS 15.6” or “iPhone 16, iOS 18.5”),</li>
+<li>the version of Rechnungslupe (Mac: Rechnungslupe › About Rechnungslupe; iPhone and iPad: in the app under Settings › Version),</li>
+<li>what you did and what happened, ideally with a screenshot.</li>
+</ul>
+<p>Invoices often contain bank details and data about other people. Only send us an invoice file if you are allowed to – a description or a screenshot without bank details is often enough. How we handle your message is described in the <a href="privacy.html#contact-by-email">privacy policy</a>.</p>
+</section>
+<section class="card" id="requirements">
+<h2>Requirements</h2>
+<ul>
+<li>Mac with macOS 15 or later; iPhone with iOS 18 or later; iPad with iPadOS 18 or later</li>
+<li>Languages: German and English – the app follows your system language</li>
+<li>Formats: XRechnung (UBL and CII, including credit notes and corrected invoices), ZUGFeRD from version 2.0.1 and Factur-X (PDF with embedded invoice data), Peppol BIS Billing 3.0</li>
+<li>Files up to 10 MB</li>
+<li>No account and no internet connection required</li>
+</ul>
+</section>
+<section class="card" id="purchase-and-devices">
+<h2>Purchase and devices</h2>
+<h3 id="buy-once-use-on-all-your-devices">Buy once, use on all your devices</h3>
+<p>Rechnungslupe is a one-time purchase in the App Store, with no subscription. One purchase covers Mac, iPhone and iPad: sign in to the App Store with the same Apple Account on each device and download Rechnungslupe there without paying again.</p>
+<h3 id="restore-a-purchase-new-device">Restore a purchase, new device</h3>
+<p>Rechnungslupe doesn’t need a separate restore button – the purchase belongs to your Apple Account. On the new device, open the App Store, sign in with the Apple Account you used for the purchase and download the app again. You’ll find your purchased apps in the App Store under your profile (iPhone and iPad: tap your profile picture; Mac: click your name in the bottom-left corner).</p>
+<h3 id="refunds">Refunds</h3>
+<p>Apple handles App Store purchases, including refunds; as the developer, we cannot issue a refund. Sign in at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> with your Apple Account and request a refund there.</p>
+</section>
+<section class="card faq" id="frequently-asked-questions">
+<h2>Frequently asked questions</h2>
+<details id="the-space-bar-doesn-t-show-a-readable-invoice-in-finder-mac">
+<summary><h3>The space bar doesn’t show a readable invoice in Finder (Mac)</h3></summary>
+<div class="answer">
+<ol>
+<li>Open Rechnungslupe once so that macOS registers the preview extension.</li>
+<li>Turn on the extension: choose “No preview? Enable the extension…” in the welcome window, or turn on Rechnungslupe under “Quick Look” in System Settings › General › Login Items &amp; Extensions.</li>
+</ol>
+<p>No XRechnung at hand? In the welcome window, “Save a Sample File to Try It…” saves the sample invoice and shows it in Finder – then just press the space bar.</p>
+<p>The space bar preview works for XRechnung files (XML). For ZUGFeRD and Factur-X PDFs, Finder shows its normal PDF preview; you see the embedded invoice data when you open the file with Rechnungslupe. XML files that are not invoices are shown as text.</p>
+</div>
+</details>
+<details id="finder-icons-don-t-show-the-seller-and-amount-mac">
+<summary><h3>Finder icons don’t show the seller and amount (Mac)</h3></summary>
+<div class="answer">
+<p>macOS only picks up a newly installed icon extension after you log out and back in or restart. Until then, Finder shows the usual XML icon. Seller and amount appear only for XRechnung files (XML).</p>
+</div>
+</details>
+<details id="how-do-i-open-an-invoice-on-iphone-or-ipad">
+<summary><h3>How do I open an invoice on iPhone or iPad?</h3></summary>
+<div class="answer">
+<p>Tap the invoice in Mail or the Files app and choose “Share” › Rechnungslupe. The Files app shows XML files with its own text preview, so “Share” is the way into the app. Alternatively, choose “Open Invoice…” in Rechnungslupe (several at once go into the invoice collection). On iPad you can also drag and drop files into the app.</p>
+</div>
+</details>
+<details id="not-an-e-invoice-what-does-that-mean">
+<summary><h3>“Not an e-invoice” – what does that mean?</h3></summary>
+<div class="answer">
+<p>The file contains no invoice data that Rechnungslupe can read, e.g. an ordinary PDF without an embedded XRechnung (“Regular PDF, not an e-invoice”) or some other XML file. “Show XML” shows the content of an XML file, “Open Another File…” lets you pick a different one. Rechnungslupe reports PDFs in the ZUGFeRD 1.0 format as outdated: since 2025, only invoices from ZUGFeRD 2.0.1 onwards count as e-invoices in Germany.</p>
+</div>
+</details>
+<details id="rechnungslupe-shows-a-notice-or-an-error-in-the-check">
+<summary><h3>Rechnungslupe shows a notice or an error in the check</h3></summary>
+<div class="answer">
+<p>Rechnungslupe recalculates line totals, VAT, total with VAT and amount due according to the EN 16931 business rules and checks important mandatory information. A notice does not automatically mean the invoice is invalid – the standard allows small rounding differences, for example. For real calculation errors, contact the seller. The check does not replace a full validation such as the one performed by the KoSIT validator.</p>
+</div>
+</details>
+<details id="why-is-there-no-girocode">
+<summary><h3>Why is there no GiroCode?</h3></summary>
+<div class="answer">
+<p>Rechnungslupe only creates the EPC QR code for bank transfers if the invoice is in euros, is paid by credit transfer (not direct debit), contains a valid IBAN and a payee, and has an amount to pay.</p>
+</div>
+</details>
+<details id="reminders-don-t-work">
+<summary><h3>Reminders don’t work</h3></summary>
+<div class="answer">
+<ul>
+<li>Rechnungslupe needs permission for the Reminders app. On the Mac: System Settings › Privacy &amp; Security › Reminders; on iPhone and iPad: Settings › Apps › Rechnungslupe › Reminders.</li>
+<li>The Reminders app needs a list; Rechnungslupe uses your default list.</li>
+<li>The reminder alerts you at 9:00 AM on the day of the deadline. If there is already an open reminder for the same invoice on the same day, Rechnungslupe does not create a second one.</li>
+</ul>
+</div>
+</details>
+<details id="several-invoices-at-once-invoice-collection">
+<summary><h3>Several invoices at once (invoice collection)</h3></summary>
+<div class="answer">
+<p>On the Mac, open the collection via File › Invoice Collection (⇧⌘2) and drag files in; on iPhone and iPad, you find it on the home screen. The collection shows the total, check status and due dates; duplicate invoices (same seller, number and amount) are marked “Duplicate” and are not counted in the total. The CSV export matches your Excel (with a German region: semicolon and decimal comma; otherwise comma and decimal point).</p>
+<p>If you open several invoices from Finder with “Open With”, they appear in separate windows. “Add Open Invoices” moves them into the collection.</p>
+</div>
+</details>
+<details id="finder-services-and-shortcuts">
+<summary><h3>Finder services and shortcuts</h3></summary>
+<div class="answer">
+<ul>
+<li>In Finder: right-click an invoice › Services › “Save as PDF with Rechnungslupe” or “Open in Invoice Collection”. If the items are missing, turn them on in System Settings › Keyboard › Keyboard Shortcuts… › Services.</li>
+<li>In the Shortcuts app on Mac, iPhone and iPad: “E-Invoice as PDF” and “Check E-Invoice” – also with Siri, e.g. “Check e-invoice with Rechnungslupe”.</li>
+</ul>
+</div>
+</details>
+<details id="does-rechnungslupe-need-an-account-or-the-internet">
+<summary><h3>Does Rechnungslupe need an account or the internet?</h3></summary>
+<div class="answer">
+<p>No. Rechnungslupe works without signing in and without an internet connection. The app reads your invoices on your device and sends nothing over the internet.</p>
+</div>
+</details>
+</section>
+<section class="card" id="privacy">
+<h2>Privacy</h2>
+<p>Rechnungslupe reads your invoices on your device – no account, no analytics, no advertising, no tracking. The app sends no data to us or to third parties. Details are in the <a href="privacy.html">privacy policy</a>.</p>
+</section>
+</main>
+<footer class="wrap site-footer">
+<nav class="links" aria-label="Legal">
+<a href="./">Help</a>
+<a href="../../impressum.html#english">Legal Notice</a>
+<a href="privacy.html">Privacy Policy</a>
+</nav>
+<p>© 2026 Jack Jipp</p>
+</footer>
+</body>
+</html>
