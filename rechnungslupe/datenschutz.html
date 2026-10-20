@@ -105,7 +105,7 @@ details[open]>summary::after{transform:translateY(2px) rotate(225deg)}
 
 <div class="hero">
 <h1>Datenschutzerklärung</h1>
-<p class="meta">Stand: 19. Oktober 2026</p>
+<p class="meta">Stand: 20. Oktober 2026</p>
 <p class="lead">Diese Erklärung gilt für die App <strong>Rechnungslupe</strong> für Mac, iPhone und iPad und für diese Website (jackthejipper.github.io). Sie beschreibt, welche Daten dabei verarbeitet werden – und welche nicht.</p>
 </div>
 <section class="card key" id="das-wichtigste-in-kuerze">
@@ -114,7 +114,8 @@ details[open]>summary::after{transform:translateY(2px) rotate(225deg)}
 <li>Rechnungslupe liest deine Rechnungen <strong>ausschließlich auf deinem Gerät</strong>. Die App, die Vorschau per Leertaste und die Finder-Symbole senden nichts über das Internet.</li>
 <li><strong>Kein Konto, keine Analyse, keine Werbung, kein Tracking.</strong> Die App enthält keine Bibliotheken oder SDKs von Drittanbietern, nur Bausteine von Apple.</li>
 <li>Über die App erhalten wir <strong>keine Daten von dir</strong>. Einzige Ausnahme: Absturzberichte, die Apple an App-Entwickler weitergibt, wenn du das in den Einstellungen deines Geräts erlaubt hast (Abschnitt 4).</li>
-<li>Den <strong>Kauf</strong> wickelt Apple über den App Store ab. Deinen Namen und deine Zahlungsdaten erfahren wir dabei nicht.</li>
+<li>Den <strong>Kauf</strong> der App und der <strong>Vollversion</strong> (In-App-Kauf) wickelt Apple über den App Store ab. Deinen Namen und deine Zahlungsdaten erfahren wir dabei nicht.</li>
+<li>Für das <strong>Monatskontingent</strong> zählt die App auf deinem Gerät, welche Rechnungen schon geöffnet wurden – nur als Prüfsummen, ohne Rechnungsinhalte (Abschnitt 2.3). Diese Angaben verlassen das Gerät nicht.</li>
 <li>Diese <strong>Website</strong> setzt keine Cookies und lädt nichts von anderen Anbietern nach. Beim Aufruf verarbeitet der Hosting-Anbieter GitHub technisch notwendige Daten wie deine IP-Adresse (Abschnitt 5).</li>
 </ul>
 </section>
@@ -150,9 +151,16 @@ E-Mail: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <p>Für einzelne Funktionen legt die App vorübergehend Kopien in ihrem temporären Ordner an: geöffnete Anhänge einer Rechnung, PDFs zum Teilen und auf dem iPad per Drag &amp; Drop abgelegte Dateien. Diese Kopien löscht die App beim nächsten Start.</p>
 <p>Öffnest du auf iPhone oder iPad eine Rechnung über „Teilen“ aus einer anderen App, etwa aus Mail, und kann Rechnungslupe die Datei nicht an ihrem Ort öffnen, legt iOS eine Kopie im Ordner „Inbox“ der App ab. Diese Kopien löscht Rechnungslupe nicht selbst; sie bleiben auf dem Gerät, bis du die App löschst. Die Liste der zuletzt geöffneten Rechnungen (Abschnitt 2.3) kann auf solche Kopien verweisen.</p>
 <h3 id="vorschau-per-leertaste-und-dateisymbole">2.2 Vorschau per Leertaste und Dateisymbole</h3>
-<p>Die Erweiterungen für die Vorschau (Quick Look) und für die Dateisymbole lesen nur die Datei, die das System gerade anzeigen möchte. Sie speichern nichts und bauen keine Netzwerkverbindung auf; auf dem Mac haben sie dafür auch keine Berechtigung. Erzeugte Symbole kann das System, wie bei anderen Dateien, in seinem eigenen Zwischenspeicher ablegen.</p>
-<h3 id="einstellungen-und-zuletzt-geoeffnete-rechnungen">2.3 Einstellungen und zuletzt geöffnete Rechnungen</h3>
-<p>In den Einstellungen der App auf deinem Gerät liegen:</p>
+<p>Die Erweiterungen für die Vorschau (Quick Look) und für die Dateisymbole lesen nur die Datei, die das System gerade anzeigen möchte. Sie bauen keine Netzwerkverbindung auf; auf dem Mac haben sie dafür auch keine Berechtigung. Erzeugte Symbole kann das System, wie bei anderen Dateien, in seinem eigenen Zwischenspeicher ablegen.</p>
+<p>Die Dateisymbole speichern nichts. Die Vorschau per Leertaste (nur Mac) liest das Monatskontingent und den Kaufstatus der App (Abschnitt 2.3) aus einem Ordner, den App und Vorschau gemeinsam nutzen. Sie trägt nur dann eine Rechnung in das Kontingent ein, wenn du in der Vorschau „Ganze Rechnung anzeigen“ wählst.</p>
+<h3 id="einstellungen-monatskontingent-und-zuletzt-geoeffnete-rechnungen">2.3 Einstellungen, Monatskontingent und zuletzt geöffnete Rechnungen</h3>
+<p>Im Kaufpreis der App sind jeden Kalendermonat zwei neue Rechnungen enthalten; mit der Vollversion sind es unbegrenzt viele. Damit das Kontingent stimmt, legt die App auf deinem Gerät ab:</p>
+<ul>
+<li><strong>Monatszähler:</strong> für jede gezählte Rechnung eine Prüfsumme (SHA-256 aus Rechnungsart, Absender, Nummer, Datum, Betrag und Währung, ohne Nummer aus der Datei) sowie Monat und Tag des Zählens. Aus der Prüfsumme lässt sich die Rechnung nicht zurückgewinnen; Rechnungsinhalte, Dateinamen oder Orte speichert der Zähler nicht.</li>
+<li><strong>Kaufstatus:</strong> ob die Vollversion freigeschaltet ist (ja oder nein, gekauft oder über die Familie), mit dem Zeitpunkt der letzten Prüfung. Die App liest das auf deinem Gerät aus dem App Store (Apples StoreKit) und legt es für die Vorschau per Leertaste ab.</li>
+</ul>
+<p>Auf iPhone und iPad liegen beide Dateien im Datenordner der App, auf dem Mac in einem Ordner, den die App mit ihrer Vorschau-Erweiterung teilt (in deinem Benutzerordner unter Library › Group Containers › group.de.getinvoiceflow.rechnungslupe). Sie gelten nur für dieses Gerät und werden nicht abgeglichen.</p>
+<p>In den Einstellungen der App auf deinem Gerät liegen außerdem:</p>
 <ul>
 <li>deine Einstellungen, z. B. ob das Willkommensfenster beim Start erscheint, und auf dem Mac, ob die Ablage-Lupe gezeigt wird und wo sie steht;</li>
 <li>auf iPhone und iPad die Liste der zuletzt geöffneten Rechnungen (höchstens 12): Ort der Datei mit einer Zugriffsfreigabe (Lesezeichen), Absender, Rechnungsnummer und Zahlbetrag. Du kannst Einträge in der App entfernen.</li>
@@ -171,12 +179,12 @@ E-Mail: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <ul>
 <li><strong>Dateien:</strong> Rechnungslupe liest nur Dateien, die du selbst öffnest, in die App ziehst oder ihr über „Teilen“ übergibst. Auf dem Mac läuft die App in Apples App-Sandbox.</li>
 <li><strong>Erinnerungen:</strong> nur mit deiner Erlaubnis und nur, wenn du „Erinnern“ wählst (Abschnitt 2.4).</li>
-<li><strong>Internet:</strong> keine. Die App und ihre Erweiterungen bauen selbst keine Verbindungen ins Internet auf; auf dem Mac haben sie dafür auch keine Berechtigung.</li>
+<li><strong>Internet:</strong> keine. Die App und ihre Erweiterungen bauen selbst keine Verbindungen ins Internet auf; auf dem Mac haben sie dafür auch keine Berechtigung. Preis, Kauf und Wiederherstellen der Vollversion erledigt der App-Store-Dienst des Systems mit deinem Apple Account (Abschnitt 3); zum Lesen von Rechnungen braucht Rechnungslupe kein Internet.</li>
 </ul>
 </section>
 <section class="card" id="kauf-ueber-den-app-store">
 <h2>3. Kauf über den App Store</h2>
-<p>Rechnungslupe kaufst und lädst du im App Store von Apple. Kauf, Zahlung, Download und Updates wickelt Apple in eigener Verantwortung ab; dafür gilt die <a href="https://www.apple.com/de/legal/privacy/de-ww/">Datenschutzrichtlinie von Apple</a>. Wir erhalten von Apple nur zusammengefasste Verkaufsberichte, etwa die Zahl der Käufe je Land – keine Namen, E-Mail-Adressen oder Zahlungsdaten.</p>
+<p>Rechnungslupe kaufst und lädst du im App Store von Apple. Auch die <strong>Vollversion</strong> kaufst du in der App über Apple (In-App-Kauf); „Kauf wiederherstellen“ fragt dafür beim App Store nach. Kauf, Zahlung, Download, Updates und Wiederherstellen wickelt Apple in eigener Verantwortung ab; dafür gilt die <a href="https://www.apple.com/de/legal/privacy/de-ww/">Datenschutzrichtlinie von Apple</a>. Wir erhalten von Apple nur zusammengefasste Verkaufsberichte, etwa die Zahl der Käufe je Land – keine Namen, E-Mail-Adressen oder Zahlungsdaten. Ob du die Vollversion gekauft hast, erfährt nur die App auf deinem Gerät (Abschnitt 2.3), nicht wir.</p>
 <p>Wenn du Rechnungslupe im App Store bewertest oder rezensierst, sehen wir – wie alle anderen – den von dir gewählten Namen und deinen Text und können öffentlich darauf antworten.</p>
 </section>
 <section class="card" id="absturzberichte-und-app-analysen-ueber-apple">
@@ -201,7 +209,7 @@ E-Mail: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <section class="card" id="rechtsgrundlagen-im-ueberblick">
 <h2>7. Rechtsgrundlagen im Überblick</h2>
 <ul>
-<li><strong>Verarbeitung auf deinem Gerät (Abschnitt 2):</strong> Diese Daten erhalten wir nicht; die App verarbeitet sie auf deinem Gerät, unter deiner Kontrolle. Informationen auf deinem Gerät zu speichern und auszulesen – Einstellungen, die Liste zuletzt geöffneter Rechnungen, vorübergehende Kopien –, ist unbedingt erforderlich, damit die App die von dir ausdrücklich gewünschten Funktionen bereitstellen kann (§ 25 Abs. 2 Nr. 2 TDDDG). Auf die Erinnerungen-App greift Rechnungslupe nur mit deiner Erlaubnis im Systemdialog zu.</li>
+<li><strong>Verarbeitung auf deinem Gerät (Abschnitt 2):</strong> Diese Daten erhalten wir nicht; die App verarbeitet sie auf deinem Gerät, unter deiner Kontrolle. Informationen auf deinem Gerät zu speichern und auszulesen – Einstellungen, Monatszähler und Kaufstatus, die Liste zuletzt geöffneter Rechnungen, vorübergehende Kopien –, ist unbedingt erforderlich, damit die App die von dir ausdrücklich gewünschten Funktionen bereitstellen kann (§ 25 Abs. 2 Nr. 2 TDDDG). Auf die Erinnerungen-App greift Rechnungslupe nur mit deiner Erlaubnis im Systemdialog zu.</li>
 <li><strong>Kauf und Bewertungen (Abschnitt 3):</strong> Für Kauf und Zahlung ist Apple verantwortlich. Die zusammengefassten Verkaufsberichte, die wir erhalten, lassen keinen Rückschluss auf dich zu. Bewertungen lesen und beantworten wir auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse an Rückmeldungen zur App.</li>
 <li><strong>Absturzberichte (Abschnitt 4):</strong> Art. 6 Abs. 1 lit. f DSGVO – unser berechtigtes Interesse, Fehler in der App zu beheben. Die Weitergabe an uns erlaubst du Apple in den Einstellungen deines Geräts.</li>
 <li><strong>Website (Abschnitt 5):</strong> Art. 6 Abs. 1 lit. f DSGVO.</li>
@@ -212,7 +220,7 @@ E-Mail: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <section class="card" id="speicherdauer">
 <h2>8. Speicherdauer</h2>
 <ul>
-<li><strong>Auf deinem Gerät:</strong> vorübergehende Kopien bis zum nächsten Start der App; Kopien, die iOS beim Öffnen über „Teilen“ im Ordner „Inbox“ ablegt, bis du die App löschst; Einstellungen und die Liste zuletzt geöffneter Rechnungen, bis du sie entfernst oder die App löschst. Auf dem Mac bleiben die Einstellungen nach dem Löschen der App in ihrem Datenordner (in deinem Benutzerordner unter Library › Containers, im Finder als „Rechnungslupe“), bis du ihn entfernst. Erinnerungen bleiben in der Erinnerungen-App, bis du sie dort löschst.</li>
+<li><strong>Auf deinem Gerät:</strong> vorübergehende Kopien bis zum nächsten Start der App; Kopien, die iOS beim Öffnen über „Teilen“ im Ordner „Inbox“ ablegt, bis du die App löschst; Einstellungen und die Liste zuletzt geöffneter Rechnungen, bis du sie entfernst oder die App löschst; Monatszähler und Kaufstatus, bis du die App löschst. Auf dem Mac bleiben die Einstellungen nach dem Löschen der App in ihrem Datenordner (in deinem Benutzerordner unter Library › Containers, im Finder als „Rechnungslupe“) und Monatszähler und Kaufstatus im gemeinsamen Ordner (Library › Group Containers › group.de.getinvoiceflow.rechnungslupe), bis du sie entfernst. Erinnerungen bleiben in der Erinnerungen-App, bis du sie dort löschst.</li>
 <li><strong>E-Mails:</strong> bis deine Anfrage erledigt ist; länger nur, soweit gesetzliche Aufbewahrungspflichten bestehen, etwa für Geschäftsbriefe nach Handels- und Steuerrecht, oder solange es zur Klärung von Ansprüchen nötig ist.</li>
 <li><strong>Server-Protokolle der Website:</strong> bei GitHub, nach dessen Angaben (Abschnitt 5.1).</li>
 </ul>
@@ -221,7 +229,7 @@ E-Mail: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <h2>9. Deine Rechte</h2>
 <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Schreib dafür an <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a>.</p>
 <p><strong>Widerspruchsrecht:</strong> Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO kannst du aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit widersprechen (Art. 21 DSGVO).</p>
-<p>Daten, die Rechnungslupe nur auf deinem Gerät speichert, liegen nicht bei uns. Du kannst sie selbst löschen, indem du Einträge in der App entfernst oder die App löschst (auf dem Mac zusätzlich ihren Datenordner, Abschnitt 8).</p>
+<p>Daten, die Rechnungslupe nur auf deinem Gerät speichert, liegen nicht bei uns. Du kannst sie selbst löschen, indem du Einträge in der App entfernst oder die App löschst (auf dem Mac zusätzlich ihren Datenordner und den gemeinsamen Ordner, Abschnitt 8).</p>
 </section>
 <section class="card" id="beschwerde-bei-einer-aufsichtsbehoerde">
 <h2>10. Beschwerde bei einer Aufsichtsbehörde</h2>

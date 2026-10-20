@@ -105,7 +105,7 @@ details[open]>summary::after{transform:translateY(2px) rotate(225deg)}
 
 <div class="hero">
 <h1>Privacy Policy</h1>
-<p class="meta">Last updated: 19 October 2026</p>
+<p class="meta">Last updated: 20 October 2026</p>
 <p class="lead">This policy applies to the app <strong>Rechnungslupe</strong> for Mac, iPhone and iPad and to this website (jackthejipper.github.io). It describes which data is processed – and which is not. This is a translation of the German version; if the two differ, the German version prevails.</p>
 </div>
 <section class="card key" id="summary">
@@ -114,7 +114,8 @@ details[open]>summary::after{transform:translateY(2px) rotate(225deg)}
 <li>Rechnungslupe reads your invoices <strong>only on your device</strong>. The app, the space bar preview and the Finder icons send nothing over the internet.</li>
 <li><strong>No account, no analytics, no advertising, no tracking.</strong> The app contains no third-party libraries or SDKs, only components from Apple.</li>
 <li>We receive <strong>no data about you</strong> through the app. The only exception: crash reports that Apple passes on to app developers if you have allowed this in your device settings (section 4).</li>
-<li>Apple handles the <strong>purchase</strong> through the App Store. We do not learn your name or your payment details.</li>
+<li>Apple handles the <strong>purchase</strong> of the app and of the <strong>Full Version</strong> (in-app purchase) through the App Store. We do not learn your name or your payment details.</li>
+<li>For the <strong>monthly allowance</strong>, the app counts on your device which invoices have already been opened – as checksums only, without invoice contents (section 2.3). This information never leaves the device.</li>
 <li>This <strong>website</strong> sets no cookies and loads nothing from other providers. When you visit it, the hosting provider GitHub processes technically necessary data such as your IP address (section 5).</li>
 </ul>
 </section>
@@ -150,9 +151,16 @@ Email: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <p>For some features the app temporarily places copies in its temporary folder: opened attachments of an invoice, PDFs for sharing, and files dropped onto the app on iPad. The app deletes these copies the next time it starts.</p>
 <p>If you open an invoice on iPhone or iPad via “Share” from another app, such as Mail, and Rechnungslupe cannot open the file in place, iOS puts a copy into the app’s “Inbox” folder. Rechnungslupe does not delete these copies itself; they remain on the device until you delete the app. The list of recently opened invoices (section 2.3) may point to such copies.</p>
 <h3 id="space-bar-preview-and-file-icons">2.2 Space bar preview and file icons</h3>
-<p>The extensions for the preview (Quick Look) and for file icons read only the file the system wants to display. They store nothing and make no network connections; on the Mac they do not even have permission to do so. Like for other files, the system may keep generated icons in its own cache.</p>
-<h3 id="settings-and-recently-opened-invoices">2.3 Settings and recently opened invoices</h3>
-<p>The app’s settings on your device contain:</p>
+<p>The extensions for the preview (Quick Look) and for file icons read only the file the system wants to display. They make no network connections; on the Mac they do not even have permission to do so. Like for other files, the system may keep generated icons in its own cache.</p>
+<p>The file icons store nothing. The space bar preview (Mac only) reads the app’s monthly allowance and purchase status (section 2.3) from a folder that the app and the preview share. It only adds an invoice to the allowance when you choose “Show Full Invoice” in the preview.</p>
+<h3 id="settings-monthly-allowance-and-recently-opened-invoices">2.3 Settings, monthly allowance and recently opened invoices</h3>
+<p>The app purchase includes two new invoices per calendar month; with the Full Version there is no limit. To keep track of the allowance, the app stores on your device:</p>
+<ul>
+<li><strong>Monthly counter:</strong> for each counted invoice a checksum (SHA-256 of document type, seller, number, date, amount and currency; without a number, of the file) plus the month and day it was counted. The invoice cannot be recovered from the checksum; the counter stores no invoice contents, file names or locations.</li>
+<li><strong>Purchase status:</strong> whether the Full Version is unlocked (yes or no, bought or through Family Sharing), with the time of the last check. The app reads this on your device from the App Store (Apple’s StoreKit) and stores it for the space bar preview.</li>
+</ul>
+<p>On iPhone and iPad, both files are in the app’s data folder; on the Mac, in a folder the app shares with its preview extension (in your home folder under Library › Group Containers › group.de.getinvoiceflow.rechnungslupe). They apply to this device only and are not synced.</p>
+<p>The app’s settings on your device also contain:</p>
 <ul>
 <li>your preferences, e.g. whether the welcome window appears at launch, and on the Mac whether the drop magnifier is shown and where;</li>
 <li>on iPhone and iPad, the list of recently opened invoices (at most 12): the file’s location with an access bookmark, seller, invoice number and amount due. You can remove entries in the app.</li>
@@ -171,12 +179,12 @@ Email: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <ul>
 <li><strong>Files:</strong> Rechnungslupe only reads files that you open yourself, drag into the app or pass to it via “Share”. On the Mac, the app runs in Apple’s App Sandbox.</li>
 <li><strong>Reminders:</strong> only with your permission and only when you choose “Remind Me” (section 2.4).</li>
-<li><strong>Internet:</strong> none. The app and its extensions make no internet connections of their own; on the Mac they do not even have permission to do so.</li>
+<li><strong>Internet:</strong> none. The app and its extensions make no internet connections of their own; on the Mac they do not even have permission to do so. The system’s App Store service handles price, purchase and restore of the Full Version with your Apple Account (section 3); Rechnungslupe needs no internet to read invoices.</li>
 </ul>
 </section>
 <section class="card" id="purchase-through-the-app-store">
 <h2>3. Purchase through the App Store</h2>
-<p>You buy and download Rechnungslupe in Apple’s App Store. Apple handles purchase, payment, download and updates under its own responsibility; <a href="https://www.apple.com/legal/privacy/en-ww/">Apple’s Privacy Policy</a> applies. We only receive aggregated sales reports from Apple, such as the number of purchases per country – no names, email addresses or payment details.</p>
+<p>You buy and download Rechnungslupe in Apple’s App Store. You also buy the <strong>Full Version</strong> in the app through Apple (in-app purchase); “Restore Purchase” asks the App Store for it. Apple handles purchase, payment, download, updates and restore under its own responsibility; <a href="https://www.apple.com/legal/privacy/en-ww/">Apple’s Privacy Policy</a> applies. We only receive aggregated sales reports from Apple, such as the number of purchases per country – no names, email addresses or payment details. Whether you bought the Full Version is known only to the app on your device (section 2.3), not to us.</p>
 <p>If you rate or review Rechnungslupe in the App Store, we – like everyone else – see the name you chose and your text and can reply publicly.</p>
 </section>
 <section class="card" id="crash-reports-and-app-analytics-via-apple">
@@ -201,7 +209,7 @@ Email: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <section class="card" id="legal-bases-at-a-glance">
 <h2>7. Legal bases at a glance</h2>
 <ul>
-<li><strong>Processing on your device (section 2):</strong> We do not receive this data; the app processes it on your device, under your control. Storing and accessing information on your device – settings, the list of recently opened invoices, temporary copies – is strictly necessary for the app to provide the features you have expressly requested (Section 25(2) no. 2 of the German Telecommunications Digital Services Data Protection Act, TDDDG). Rechnungslupe only accesses the Reminders app with your permission in the system dialog.</li>
+<li><strong>Processing on your device (section 2):</strong> We do not receive this data; the app processes it on your device, under your control. Storing and accessing information on your device – settings, monthly counter and purchase status, the list of recently opened invoices, temporary copies – is strictly necessary for the app to provide the features you have expressly requested (Section 25(2) no. 2 of the German Telecommunications Digital Services Data Protection Act, TDDDG). Rechnungslupe only accesses the Reminders app with your permission in the system dialog.</li>
 <li><strong>Purchase and reviews (section 3):</strong> Apple is responsible for purchase and payment. The aggregated sales reports we receive do not allow any conclusions about you. We read and reply to reviews on the basis of Art. 6(1)(f) GDPR – our legitimate interest in feedback on the app.</li>
 <li><strong>Crash reports (section 4):</strong> Art. 6(1)(f) GDPR – our legitimate interest in fixing errors in the app. You allow Apple to pass them on to us in your device settings.</li>
 <li><strong>Website (section 5):</strong> Art. 6(1)(f) GDPR.</li>
@@ -212,7 +220,7 @@ Email: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <section class="card" id="retention">
 <h2>8. Retention</h2>
 <ul>
-<li><strong>On your device:</strong> temporary copies until the next start of the app; copies that iOS places in the “Inbox” folder when opening via “Share”, until you delete the app; settings and the list of recently opened invoices, until you remove them or delete the app. On the Mac, the settings remain in the app’s data folder after you delete the app (in your home folder under Library › Containers, shown in Finder as “Rechnungslupe”) until you remove it. Reminders remain in the Reminders app until you delete them there.</li>
+<li><strong>On your device:</strong> temporary copies until the next start of the app; copies that iOS places in the “Inbox” folder when opening via “Share”, until you delete the app; settings and the list of recently opened invoices, until you remove them or delete the app; monthly counter and purchase status, until you delete the app. On the Mac, the settings remain in the app’s data folder after you delete the app (in your home folder under Library › Containers, shown in Finder as “Rechnungslupe”), and the monthly counter and purchase status in the shared folder (Library › Group Containers › group.de.getinvoiceflow.rechnungslupe), until you remove them. Reminders remain in the Reminders app until you delete them there.</li>
 <li><strong>Emails:</strong> until your request has been dealt with; longer only where statutory retention obligations apply, for example for business correspondence under German commercial and tax law, or as long as necessary to resolve claims.</li>
 <li><strong>Website server logs:</strong> at GitHub, as stated by GitHub (section 5.1).</li>
 </ul>
@@ -221,7 +229,7 @@ Email: <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a></p>
 <h2>9. Your rights</h2>
 <p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). To exercise them, write to <a href="mailto:info@getinvoiceflow.de">info@getinvoiceflow.de</a>.</p>
 <p><strong>Right to object:</strong> You may object at any time, on grounds relating to your particular situation, to processing based on Art. 6(1)(f) GDPR (Art. 21 GDPR).</p>
-<p>Data that Rechnungslupe stores only on your device is not held by us. You can delete it yourself by removing entries in the app or deleting the app (on the Mac, also its data folder, see section 8).</p>
+<p>Data that Rechnungslupe stores only on your device is not held by us. You can delete it yourself by removing entries in the app or deleting the app (on the Mac, also its data folder and the shared folder, see section 8).</p>
 </section>
 <section class="card" id="complaints-to-a-supervisory-authority">
 <h2>10. Complaints to a supervisory authority</h2>
